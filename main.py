@@ -46,7 +46,7 @@ def main():
         print("Transforming data...")
         load()
     elif args.action == "general_query":
-        if args.query == "default":
+        if args.query == "default" or args.query == None:
             general_query(default_query)
         else:
             general_query(args.query)

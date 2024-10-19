@@ -7,6 +7,7 @@ from mylib.transform_load import load
 from mylib.query import (
     general_query,
 )
+from mylib.config import *
 
 
 def handle_arguments(args):
@@ -45,8 +46,10 @@ def main():
         print("Transforming data...")
         load()
     elif args.action == "general_query":
-        general_query(args.query)
-
+        if args.query == "default":
+            general_query(default_query)
+        else:
+            general_query(args.query)
     else:
         print(f"Unknown action: {args.action}")
 

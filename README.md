@@ -13,11 +13,8 @@ Run the script with one of the supported actions. The available actions are:
 
 - `extract`: Extracts data from a source.
 - `transform_load`: Transforms and loads data into a destination.
-- `update_record`: Update a specific record (implementation not shown in the script).
-- `delete_record`: Delete a specific record (implementation not shown in the script).
-- `create_record`: Create a new record (implementation not shown in the script).
 - `general_query`: Run a general query. You can specify a custom query or use the default one.
-- `read_data`: Read data from the source (implementation not shown in the script).
+
 
 ### Example Commands:
 

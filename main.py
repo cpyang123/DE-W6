@@ -1,4 +1,3 @@
-
 """handles cli commands"""
 import sys
 import argparse
@@ -7,29 +6,29 @@ from mylib.transform_load import load
 from mylib.query import (
     general_query,
 )
-from mylib.config import *
+from mylib.config import default_query
 
 
 def handle_arguments(args):
     """add action based on inital calls"""
     parser = argparse.ArgumentParser(description="ETL-Query script")
     parser.add_argument(
-        "action" ,
+        "action",
         choices=[
-            "extract" ,
-            "transform_load" ,
-            "update_record"  ,
-            "delete_record"  ,
-            "create_record"  ,
-            "general_query"  ,
-            "read_data" ,
-        ] ,
+            "extract",
+            "transform_load",
+            "update_record",
+            "delete_record",
+            "create_record",
+            "general_query",
+            "read_data",
+        ],
     )
     args = parser.parse_args(args[:1])
     print(args.action)
 
     if args.action == "general_query":
-        parser.add_argument("query")
+        parser.add_argument("query", nargs="?", default="default")
 
     # parse again with ever
     return parser.parse_args(sys.argv[1:])

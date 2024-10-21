@@ -1,3 +1,5 @@
+[![Python Application Test with Github Actions for DE-W6](https://github.com/cpyang123/DE-W6/actions/workflows/test.yml/badge.svg)](https://github.com/cpyang123/DE-W6/actions/workflows/test.yml)
+
 # DE-W6 ETL-Query Script
 
 This is a command-line interface (CLI) script that handles various ETL (Extract, Transform, Load) processes and querying operations. The script provides several actions to work with data extraction, loading, and querying, using a set of predefined commands.

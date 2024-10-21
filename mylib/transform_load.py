@@ -18,7 +18,7 @@ def load(dataset="data/housing_data.csv"):
     ) as connection:
         c = connection.cursor()
         # INSERT TAKES TOO LONG
-        c.execute("DROP TABLE IF EXISTS tbl_housing_data")
+        #c.execute("DROP TABLE IF EXISTS tbl_housing_data")
         c.execute("SHOW TABLES FROM default LIKE 'tbl_housing*'")
         result = c.fetchall()
         # takes too long so not dropping anymore
